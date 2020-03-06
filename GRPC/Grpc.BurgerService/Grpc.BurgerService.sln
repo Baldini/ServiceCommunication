@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grpc.BurgerService", "Grpc.BurgerService\Grpc.BurgerService.csproj", "{A83595C0-3456-4A9F-ACF7-C6A269AB70BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{1AB9ADAE-22B4-40F7-BE43-5B1FC91CCFBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "..\..\Base\Domain\Domain.csproj", "{8DCB46FC-6304-4E1C-B171-C401A1CA20A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A83595C0-3456-4A9F-ACF7-C6A269AB70BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83595C0-3456-4A9F-ACF7-C6A269AB70BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83595C0-3456-4A9F-ACF7-C6A269AB70BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83595C0-3456-4A9F-ACF7-C6A269AB70BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCB46FC-6304-4E1C-B171-C401A1CA20A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCB46FC-6304-4E1C-B171-C401A1CA20A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCB46FC-6304-4E1C-B171-C401A1CA20A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCB46FC-6304-4E1C-B171-C401A1CA20A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DCB46FC-6304-4E1C-B171-C401A1CA20A6} = {1AB9ADAE-22B4-40F7-BE43-5B1FC91CCFBC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA9073DA-5C83-4882-952A-9F36DC035BAA}
+	EndGlobalSection
+EndGlobal
