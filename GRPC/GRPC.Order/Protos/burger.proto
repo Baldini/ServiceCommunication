@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "GRPC.BurgerService";
+
+package burger;
+
+
+service Burger {
+  rpc MakeBurger (BurgerRequest) returns (BurgerReply);
+}
+
+
+message BurgerRequest {
+  enum CheeseType{
+    Cheddar = 0;
+    Blue_Cheese = 1;
+    Camembert = 2;
+    Gruyere = 3;
+    Parmesan = 4;
+    Mozzarella = 5;
+  }
+  CheeseType cheese = 1;
+  int32 cheeseQuantity = 2;
+  int32 meatQuantity=3;
+}
+
+message BurgerReply {
+  string burgerId = 1;
+}

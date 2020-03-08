@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "GRPC.DrinkService";
+
+package drink;
+
+
+service Drink {
+  rpc MakeDrink (DrinkRequest) returns (DrinkReply);
+}
+
+
+message DrinkRequest {
+  enum DrinkType{
+     Soda = 0;
+     Juice = 1;
+  }
+  DrinkType type = 1;
+
+  enum DrinkSize{
+     Small = 0;
+     Medium = 1;
+     Large = 2;
+     Extra_Large = 3;
+  }
+  DrinkSize size = 2;
+
+  enum DrinkFlavor
+  {
+      Cola = 0;
+      Orange = 1;
+      Lemon = 2;
+      Guarana = 3;
+  }
+  DrinkFlavor flavor = 3;
+}
+
+message DrinkReply {
+  string drinkId = 1;
+}

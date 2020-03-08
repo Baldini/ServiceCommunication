@@ -28,7 +28,7 @@ namespace Domain
     public enum CheeseType
     {
         Cheddar,
-        Blue_Cheese,
+        BlueCheese,
         Camembert,
         Gruyere,
         Parmesan,

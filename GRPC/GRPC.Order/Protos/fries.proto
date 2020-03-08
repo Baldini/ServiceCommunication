@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "GRPC.FriesService";
+
+package fries;
+
+// The greeting service definition.
+service Fries {
+  // Sends a greeting
+  rpc MakeFries (FriesRequest) returns (FriesReply);
+}
+
+
+message FriesRequest {
+  enum FriesType{
+    Regular = 0;
+    CheeseFries = 1;
+    BaconCheeseFries = 2;
+  }
+  FriesType friesType = 1;
+}
+
+// The response message containing the greetings.
+message FriesReply {
+  string friesId = 1;
+}
