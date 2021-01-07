@@ -7,16 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 -Http", "1 -Http", "{68B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Queue", "2 - Queue", "{EC61862A-C6DD-4FD1-AF2D-4A2F5E3ACAAC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - GRP", "3 - GRP", "{3E81E357-AE38-4600-9DFF-2A37C8A68CF3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - GRPC", "3 - GRPC", "{3E81E357-AE38-4600-9DFF-2A37C8A68CF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Orchestration", "1 - Orchestration", "{142C7664-E53A-4C68-B593-BD3EAA788D29}"
 	ProjectSection(SolutionItems) = preProject
 		Queue\Orchestration\docker-compose.yml = Queue\Orchestration\docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Choreography", "2 - Choreography", "{5B4658D0-2A03-4AEF-BB44-D04E965CE039}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Saga", "3 - Saga", "{4F8D607E-BD02-4136-B346-EF1E9D9620A8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Saga", "2 - Saga", "{4F8D607E-BD02-4136-B346-EF1E9D9620A8}"
 	ProjectSection(SolutionItems) = preProject
 		Queue\Saga\docker-compose.yml = Queue\Saga\docker-compose.yml
 	EndProjectSection
@@ -69,6 +67,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{1D44C8
 		GRPC\Protos\drink.proto = GRPC\Protos\drink.proto
 		GRPC\Protos\fries.proto = GRPC\Protos\fries.proto
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Saga + RequestClient", "3 - Saga + RequestClient", "{C1388BD8-00CD-476A-B9F1-3E7B66C0357C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Saga.FriesService", "Queue\Saga\Saga.FriesService\Saga.FriesService.csproj", "{8DAB3853-722E-48F7-8863-194C3A70FE96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaRequestClient.BurguerService", "Queue\SagaRequestClient\SagaRequestClient.BurguerService\SagaRequestClient.BurguerService.csproj", "{63484757-550E-4AD2-8A4C-CB24B3835474}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaRequestClient.Commands", "Queue\SagaRequestClient\SagaRequestClient.Commands\SagaRequestClient.Commands.csproj", "{84FA4CAE-2E03-4FC9-8FAE-E396B56DB32F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaRequestClient.DrinkService", "Queue\SagaRequestClient\SagaRequestClient.DrinkService\SagaRequestClient.DrinkService.csproj", "{C0932A52-389F-4FDD-A89B-54F0DC7DAAB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaRequestClient.FriesService", "Queue\SagaRequestClient\SagaRequestClient.FriesService\SagaRequestClient.FriesService.csproj", "{9BB14000-C2F9-499A-BA84-30E2867A1A7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaRequestClient.Orchestrator", "Queue\SagaRequestClient\SagaRequestClient.Orchestrator\SagaRequestClient.Orchestrator.csproj", "{7CEB4C1B-FB37-48C7-8D48-A85FA357ECC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaRequestClient.Order", "Queue\SagaRequestClient\SagaRequestClient.Order\SagaRequestClient.Order.csproj", "{A5E1EA09-03EF-4745-A4D1-A3666F0F557F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -156,13 +170,40 @@ Global
 		{7C123603-98DA-4C28-A957-F456A5BFBC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C123603-98DA-4C28-A957-F456A5BFBC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C123603-98DA-4C28-A957-F456A5BFBC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DAB3853-722E-48F7-8863-194C3A70FE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DAB3853-722E-48F7-8863-194C3A70FE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DAB3853-722E-48F7-8863-194C3A70FE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DAB3853-722E-48F7-8863-194C3A70FE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63484757-550E-4AD2-8A4C-CB24B3835474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63484757-550E-4AD2-8A4C-CB24B3835474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63484757-550E-4AD2-8A4C-CB24B3835474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63484757-550E-4AD2-8A4C-CB24B3835474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84FA4CAE-2E03-4FC9-8FAE-E396B56DB32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FA4CAE-2E03-4FC9-8FAE-E396B56DB32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FA4CAE-2E03-4FC9-8FAE-E396B56DB32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FA4CAE-2E03-4FC9-8FAE-E396B56DB32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0932A52-389F-4FDD-A89B-54F0DC7DAAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0932A52-389F-4FDD-A89B-54F0DC7DAAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0932A52-389F-4FDD-A89B-54F0DC7DAAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0932A52-389F-4FDD-A89B-54F0DC7DAAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB14000-C2F9-499A-BA84-30E2867A1A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB14000-C2F9-499A-BA84-30E2867A1A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB14000-C2F9-499A-BA84-30E2867A1A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB14000-C2F9-499A-BA84-30E2867A1A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CEB4C1B-FB37-48C7-8D48-A85FA357ECC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CEB4C1B-FB37-48C7-8D48-A85FA357ECC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CEB4C1B-FB37-48C7-8D48-A85FA357ECC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CEB4C1B-FB37-48C7-8D48-A85FA357ECC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E1EA09-03EF-4745-A4D1-A3666F0F557F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E1EA09-03EF-4745-A4D1-A3666F0F557F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E1EA09-03EF-4745-A4D1-A3666F0F557F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E1EA09-03EF-4745-A4D1-A3666F0F557F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{142C7664-E53A-4C68-B593-BD3EAA788D29} = {EC61862A-C6DD-4FD1-AF2D-4A2F5E3ACAAC}
-		{5B4658D0-2A03-4AEF-BB44-D04E965CE039} = {EC61862A-C6DD-4FD1-AF2D-4A2F5E3ACAAC}
 		{4F8D607E-BD02-4136-B346-EF1E9D9620A8} = {EC61862A-C6DD-4FD1-AF2D-4A2F5E3ACAAC}
 		{33843551-36ED-41B8-B9DE-A4F3CB39DCA1} = {B6FA866A-862B-46C7-9BC9-0E02932691B9}
 		{1AD8D1AF-E5B9-47CC-BECD-670C2050A39E} = {68B25CA8-6A8E-4157-A376-BF8A5F22E7FF}
@@ -185,6 +226,14 @@ Global
 		{54BC0191-8D7E-4D25-BF7C-E22A0D797260} = {3E81E357-AE38-4600-9DFF-2A37C8A68CF3}
 		{7C123603-98DA-4C28-A957-F456A5BFBC11} = {3E81E357-AE38-4600-9DFF-2A37C8A68CF3}
 		{1D44C82D-F5EA-4E1F-A642-40584BA7604D} = {3E81E357-AE38-4600-9DFF-2A37C8A68CF3}
+		{C1388BD8-00CD-476A-B9F1-3E7B66C0357C} = {EC61862A-C6DD-4FD1-AF2D-4A2F5E3ACAAC}
+		{8DAB3853-722E-48F7-8863-194C3A70FE96} = {4F8D607E-BD02-4136-B346-EF1E9D9620A8}
+		{63484757-550E-4AD2-8A4C-CB24B3835474} = {C1388BD8-00CD-476A-B9F1-3E7B66C0357C}
+		{84FA4CAE-2E03-4FC9-8FAE-E396B56DB32F} = {C1388BD8-00CD-476A-B9F1-3E7B66C0357C}
+		{C0932A52-389F-4FDD-A89B-54F0DC7DAAB2} = {C1388BD8-00CD-476A-B9F1-3E7B66C0357C}
+		{9BB14000-C2F9-499A-BA84-30E2867A1A7E} = {C1388BD8-00CD-476A-B9F1-3E7B66C0357C}
+		{7CEB4C1B-FB37-48C7-8D48-A85FA357ECC7} = {C1388BD8-00CD-476A-B9F1-3E7B66C0357C}
+		{A5E1EA09-03EF-4745-A4D1-A3666F0F557F} = {C1388BD8-00CD-476A-B9F1-3E7B66C0357C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B3FDFC2-24B6-4010-B5EB-523C090637C5}
